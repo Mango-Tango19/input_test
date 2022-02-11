@@ -4,6 +4,8 @@ import { useState } from "react";
 // 1. Починить инпуты;
 // 2. Сделать так что бы инпуты добавлялись
 
+
+
 const inputNames : any = { 
   bobName1 : String, 
   bobName2 : String, 
@@ -29,9 +31,8 @@ export default function App() {
     setInputValue({
       [name]: target.value
     })
-
-
   }
+
 
   return (
     <div className="App">
@@ -54,11 +55,11 @@ export default function App() {
         <button type="button">Remove input</button>
       </div>
       <div>
-        <input   onChange={(e) => handleChange(e)} type="text" value={inputValue.notBobName1}  name="notBobName2"/>
+        <input   onChange={(e) => handleChange(e)} type="text" value={inputValue.notBobName2}  name="notBobName2"/>
         <button type="button">Remove input</button>
       </div>
       <div className="controls">
-        <button type="button">Add input</button>
+        <button type="button"> Add input</button>
         <button onClick={handleSubmit} type="button">
           Submit values
         </button>
